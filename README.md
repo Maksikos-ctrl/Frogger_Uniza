@@ -12,7 +12,7 @@ Tento projekt je jednoduchá implementácia klasickej hry **Frogger**, kde hrá�
 ## Inštalácia
 1. Skontrolujte, či máte nainštalovanú **Javu** (minimálne verziu 8).
 2. Klonujte tento repozitár:
-   __git clone https://github.com/uzivatelsky_meno/frogger_game.git__
+   __git clone https://github.com/Maksikos-ctrl/Frogger_Uniza.git__
 3. Prejdite do adresára projektu:
     __cd frogger_game__
 4. Skontrolujte, či máte všetky závislosti (pre túto hru používame základné Java knižnice bez potreby externých závislostí).

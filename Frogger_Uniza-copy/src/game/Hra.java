@@ -6,15 +6,15 @@
 package game;
 
 import java.util.ArrayList;
-import entities.Frog;
-import entities.Obstacle;
+import entities.Zaba;
+import entities.Drevo;
 
-public class Game {
-    private Frog frog;
-    private ArrayList<Obstacle> obstacles;
+public class Hra {
+    private Zaba frog;
+    private ArrayList<Drevo> obstacles;
     private boolean running;
 
-    public Game() {
+    public Hra() {
         initGame();
     }
 
@@ -22,7 +22,7 @@ public class Game {
      * Inicializuje hru, vytvára hráča a prekážky.
     */
     private void initGame() {
-        frog = new Frog();
+        frog = new Zaba();
         obstacles = new ArrayList<>();
         // Pridanie prekážok
         // Napríklad: obstacles.add(new Vehicle(x, y, speed));
@@ -37,7 +37,7 @@ public class Game {
 
         // Aktualizácia hráča a prekážok
         frog.update();
-        for (Obstacle obstacle : obstacles) {
+        for (Drevo obstacle : obstacles) {
             obstacle.update();
 
             // Kontrola kolízií
@@ -47,11 +47,11 @@ public class Game {
         }
     }
 
-    public Frog getFrog() {
+    public Zaba getFrog() {
         return frog;
     }
 
-    public ArrayList<Obstacle> getObstacles() {
+    public ArrayList<Drevo> getObstacles() {
         return obstacles;
     }
 

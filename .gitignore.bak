@@ -1,0 +1,7 @@
+*.class
+*.ctxt
+<<<<<<< HEAD
+.jar
+=======
+*.jar
+>>>>>>> matus

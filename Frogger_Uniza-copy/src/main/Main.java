@@ -7,12 +7,12 @@ package main;
 
 import javax.swing.*;
 
-import game.GamePanel;
+import game.HernaPanel;
 
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Frogger");
-        GamePanel panel = new GamePanel();
+        HernaPanel panel = new HernaPanel();
 
         frame.add(panel);
         frame.pack();
@@ -20,8 +20,7 @@ public class Main {
         frame.setVisible(true);
 
       
-        Timer timer = new Timer(16, e -> panel.update());
-        timer.start();
+        
     }
 }
 

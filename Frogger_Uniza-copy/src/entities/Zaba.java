@@ -5,16 +5,31 @@
 
 package entities;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+/**
+ * Trieda predstavuje hráča (žabu).
+ * Obsahuje logiku pohybu, vykresľovania a kolízií.
+ */
+public class Zaba {
+    private int x, y; // Pozícia žaby
+    private static final int SIZE = 30; // Veľkosť žaby
+    private BufferedImage frogImage; // Obrázok žaby
 
-public class Frog {
-    private int x, y;
-    private static final int SIZE = 30;
-
-    public Frog() {
-        // Počiatočná pozícia žaby
+    /**
+     * Konštruktor inicializuje žabu.
+     */
+   public Zaba() {
         x = 400;
         y = 550;
+
+        try {
+            frogImage = ImageIO.read(getClass().getResource("/resources/frog.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -30,8 +45,12 @@ public class Frog {
     * @param g Grafický objekt na kreslenie.
     */
     public void draw(Graphics g) {
-        g.setColor(Color.GREEN);
-        g.fillRect(x, y, SIZE, SIZE);
+        if (frogImage != null) {
+            g.drawImage(frogImage, x, y, SIZE, SIZE, null);
+        } else {
+            g.setColor(Color.GREEN);
+            g.fillRect(x, y, SIZE, SIZE);
+        }
     }
 
     /**
@@ -55,7 +74,7 @@ public class Frog {
     * @param obstacle Prekážka na kontrolu kolízie.
     * @return true, ak sa objekty prekrývajú, inak false.
     */
-    public boolean intersects(Obstacle obstacle) {
+    public boolean intersects(Drevo obstacle) {
         return getBounds().intersects(obstacle.getBounds());
     }
 }

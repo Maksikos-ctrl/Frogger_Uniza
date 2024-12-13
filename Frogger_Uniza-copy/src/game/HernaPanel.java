@@ -69,19 +69,19 @@ public class HernaPanel extends JPanel implements KeyListener {
             
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Ошибка загрузки изображений!");
+            System.out.println("chyba sa stala!");
         }
 
         platforms = new ArrayList<>();
         vehicles = new ArrayList<>();
 
-        vehicles.add(new Auto(200, 470, 120, 60, 4, carImage));  // В пределах дороги
-        vehicles.add(new Auto(600, 520, 120, 60, -3, carImage)); // В пределах дороги
-        vehicles.add(new Auto(900, 500, 120, 60, 2, carImage));  // В пределах дороги
+        vehicles.add(new Auto(200, 470, 120, 60, 4, carImage));
+        vehicles.add(new Auto(600, 520, 120, 60, -3, carImage));
+        vehicles.add(new Auto(900, 500, 120, 60, 2, carImage));  
 
-        platforms.add(new Platforma(100, 260, 200, 50, 3, logImage)); // Поднято на 20 пикселей
-        platforms.add(new Platforma(400, 290, 200, 50, -2, logImage)); // Поднято на 30 пикселей
-        platforms.add(new Platforma(700, 270, 200, 50, 2, logImage)); // Поднято на 30 пикселей
+        platforms.add(new Platforma(100, 260, 200, 50, 3, logImage)); 
+        platforms.add(new Platforma(400, 290, 200, 50, -2, logImage));
+        platforms.add(new Platforma(700, 270, 200, 50, 2, logImage)); 
 
 
         Timer timer = new Timer(30, e -> update());

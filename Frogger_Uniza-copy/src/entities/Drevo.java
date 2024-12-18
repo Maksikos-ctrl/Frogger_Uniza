@@ -22,7 +22,7 @@ public abstract class Drevo {
 
     public void update() {
         x += speed;
-        // Если бревно выходит за пределы экрана, перемещаем его на другую сторону
+        // Ak objekt zmizne mimo obrazovky, presunie sa na druhú stranu
         if (x > Konstanty.WINDOW_WIDTH) {
             x = -width;
         } else if (x + width < 0) {
@@ -40,13 +40,30 @@ public abstract class Drevo {
         }
     }
 
-    // Геттеры и сеттеры
-    public int getX() { return x; }
-    public int getY() { return y; }
-    public int getWidth() { return width; }
-    public int getHeight() { return height; }
-    public void setX(int x) { this.x = x; }
-    public void setY(int y) { this.y = y; }
+    // Gettre a settre
+    public int getX() { 
+        return x; 
+    }
+
+    public int getY() { 
+        return y; 
+    }
+
+    public int getWidth() { 
+        return width; 
+    }
+
+    public int getHeight() { 
+        return height; 
+    }
+
+    public void setX(int x) { 
+        this.x = x;
+    }
+
+    public void setY(int y) { 
+        this.y = y; 
+    }
 
     protected abstract Rectangle getBounds();
 }

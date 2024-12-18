@@ -7,12 +7,12 @@ package main;
 
 import javax.swing.*;
 
-import game.HernaPanel;
+import game.HernyPanel;
 
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Frogger");
-        HernaPanel panel = new HernaPanel();
+        HernyPanel panel = new HernyPanel();
 
         frame.add(panel);
         frame.pack();

@@ -18,7 +18,7 @@ import java.net.URL;
  * Trieda predstavuje hlavnú hernú plochu.
  * Zodpovedá za vykresľovanie objektov, detekciu kolízií a ovládanie hry.
  */
-public class HernaPanel extends JPanel implements KeyListener {
+public class HernyPanel extends JPanel implements KeyListener {
     private int frogX = 500; // Pozícia žaby na osi X
     private int frogY = 700;  // Pozícia žaby na osi Y
     private int frogSpeed = 50; // Rýchlosť pohybu žaby
@@ -47,7 +47,7 @@ public class HernaPanel extends JPanel implements KeyListener {
      * Konštruktor inicializuje hernú plochu a objekty v hre.
      */
 
-    public HernaPanel() {
+    public HernyPanel() {
         setPreferredSize(new Dimension(Konstanty.WINDOW_WIDTH, Konstanty.WINDOW_HEIGHT));
         setFocusable(true);
         setBackground(Color.BLACK);

@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
  * Obsahuje logiku pre pohyb a vykresľovanie áut.
  */
 public class Auto extends Drevo {
-    private int speed;  // Rýchlosť auta
+    private int rychlost;  // Rýchlosť auta
 
      /**
      * Konštruktor inicializuje auto.
@@ -20,12 +20,12 @@ public class Auto extends Drevo {
      * @param y Počiatočná pozícia na osi Y.
      * @param width Šírka auta.
      * @param height Výška auta.
-     * @param speed Rýchlosť auta.
+     * @param rychlost Rýchlosť auta.
      * @param carImage Obrázok auta.
      */
-    public Auto(int x, int y, int width, int height, int speed, Image carImage) {
+    public Auto(int x, int y, int width, int height, int rychlost, Image carImage) {
         super(x, y, width, height, carImage);
-        this.speed = speed;
+        this.rychlost = rychlost;
     }
 
       /**
@@ -48,12 +48,12 @@ public class Auto extends Drevo {
      */
 
     public void update() {
-        x += speed;
+        x += rychlost;
 
         
-        if (x > Konstanty.SIRKA_OKNA && speed > 0) {
+        if (x > Konstanty.SIRKA_OKNA && rychlost > 0) {
             x = -width;
-        } else if (x < -width && speed < 0) {
+        } else if (x < -width && rychlost < 0) {
             x = Konstanty.SIRKA_OKNA;
         }
     }

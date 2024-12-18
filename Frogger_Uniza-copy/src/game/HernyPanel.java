@@ -48,7 +48,7 @@ public class HernyPanel extends JPanel implements KeyListener {
      */
 
     public HernyPanel() {
-        setPreferredSize(new Dimension(Konstanty.WINDOW_WIDTH, Konstanty.WINDOW_HEIGHT));
+        setPreferredSize(new Dimension(Konstanty.SIRKA_OKNA, Konstanty.VYSKA_OKNA));
         setFocusable(true);
         setBackground(Color.BLACK);
         addKeyListener(this);
@@ -99,7 +99,7 @@ public class HernyPanel extends JPanel implements KeyListener {
         super.paintComponent(g);
 
         // Vykreslenie pozadia
-        g.drawImage(backgroundImage, 0, 0, Konstanty.WINDOW_WIDTH, Konstanty.WINDOW_HEIGHT, null);
+        g.drawImage(backgroundImage, 0, 0, Konstanty.SIRKA_OKNA, Konstanty.VYSKA_OKNA, null);
 
        // Vykreslenie objektov
         for (Auto vehicle : vehicles) {
@@ -121,20 +121,20 @@ public class HernyPanel extends JPanel implements KeyListener {
         // Vykreslenie skóre a životov
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.BOLD, 20));
-        g.drawString("Score: " + score, Konstanty.WINDOW_WIDTH - 150, 30);
-        g.drawString("Lives: " + lives, Konstanty.WINDOW_WIDTH - 150, 60);
+        g.drawString("Score: " + score, Konstanty.SIRKA_OKNA - 150, 30);
+        g.drawString("Lives: " + lives, Konstanty.SIRKA_OKNA - 150, 60);
 
         // Vykreslenie Game Over obrazovky
         if (gameOver) {
             g.setColor(new Color(0, 0, 0, 150));
-            g.fillRect(0, 0, Konstanty.WINDOW_WIDTH, Konstanty.WINDOW_HEIGHT);
+            g.fillRect(0, 0, Konstanty.SIRKA_OKNA, Konstanty.VYSKA_OKNA);
 
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", Font.BOLD, 48));
-            g.drawString("Game Over", Konstanty.WINDOW_WIDTH / 2 - 150, Konstanty.WINDOW_HEIGHT / 2 - 50);
+            g.drawString("Game Over", Konstanty.SIRKA_OKNA / 2 - 150, Konstanty.VYSKA_OKNA / 2 - 50);
 
             g.setFont(new Font("Arial", Font.PLAIN, 24));
-            g.drawString("Final Score: " + score, Konstanty.WINDOW_WIDTH / 2 - 100, Konstanty.WINDOW_HEIGHT / 2 + 50);
+            g.drawString("Final Score: " + score, Konstanty.SIRKA_OKNA / 2 - 100, Konstanty.VYSKA_OKNA / 2 + 50);
         }
     }
 
@@ -268,8 +268,8 @@ public class HernyPanel extends JPanel implements KeyListener {
             }
 
             // Kontrola hraníc okna
-            frogX = Math.max(0, Math.min(frogX, Konstanty.WINDOW_WIDTH - 60));
-            frogY = Math.max(0, Math.min(frogY, Konstanty.WINDOW_HEIGHT - 60));
+            frogX = Math.max(0, Math.min(frogX, Konstanty.SIRKA_OKNA - 60));
+            frogY = Math.max(0, Math.min(frogY, Konstanty.VYSKA_OKNA - 60));
         }
     }
 

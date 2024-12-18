@@ -8,12 +8,12 @@ import utils.ImageUtils;
 
 import javax.imageio.ImageIO;
 
-public class Rieka {
+public class Reka {
     private int y;
     private ArrayList<Platforma> platforms;
     private BufferedImage riverImage;
 
-    public Rieka(int y) {
+    public Reka(int y) {
         this.y = y;
         this.platforms = new ArrayList<>();
 

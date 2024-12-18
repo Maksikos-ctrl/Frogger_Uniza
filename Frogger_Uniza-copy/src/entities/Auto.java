@@ -51,10 +51,10 @@ public class Auto extends Drevo {
         x += speed;
 
         
-        if (x > Konstanty.WINDOW_WIDTH && speed > 0) {
+        if (x > Konstanty.SIRKA_OKNA && speed > 0) {
             x = -width;
         } else if (x < -width && speed < 0) {
-            x = Konstanty.WINDOW_WIDTH;
+            x = Konstanty.SIRKA_OKNA;
         }
     }
 

@@ -32,10 +32,10 @@ public class Platforma extends Drevo {
     @Override
     public void update() {
         x += speed;
-        if (x > Konstanty.WINDOW_WIDTH) {
+        if (x > Konstanty.SIRKA_OKNA) {
             x = -width;
         } else if (x + width < 0) {
-            x = Konstanty.WINDOW_WIDTH;
+            x = Konstanty.SIRKA_OKNA;
         }
     }
 

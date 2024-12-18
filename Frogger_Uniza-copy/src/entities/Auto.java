@@ -18,13 +18,13 @@ public class Auto extends Drevo {
      * 
      * @param x Počiatočná pozícia na osi X.
      * @param y Počiatočná pozícia na osi Y.
-     * @param width Šírka auta.
-     * @param height Výška auta.
+     * @param sirka Šírka auta.
+     * @param vyska Výška auta.
      * @param rychlost Rýchlosť auta.
      * @param carImage Obrázok auta.
      */
-    public Auto(int x, int y, int width, int height, int rychlost, Image carImage) {
-        super(x, y, width, height, carImage);
+    public Auto(int x, int y, int sirka, int vyska, int rychlost, Image carImage) {
+        super(x, y, sirka, vyska, carImage);
         this.rychlost = rychlost;
     }
 
@@ -38,7 +38,7 @@ public class Auto extends Drevo {
         if (image != null) {
             g.drawImage(image, x, y, width, height, null);
         } else {
-            System.out.println("Vehicle image is null!");
+            System.out.println("Obrazok auta je null!");
         }
     }
 

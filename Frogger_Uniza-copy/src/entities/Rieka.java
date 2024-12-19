@@ -44,7 +44,7 @@ public class Rieka {
     }
 
     public void draw(Graphics g) {
-        // Рисуем реку
+        // Kreslenie rieky
         if (riverImage != null) {
             g.drawImage(riverImage, 0, y, 800, 100, null);
         } else {
@@ -52,7 +52,7 @@ public class Rieka {
             g.fillRect(0, y, 800, 100);
         }
     
-        // Рисуем бревна
+        // Kreslenie platformy
         for (Platforma platform : platforms) {
             platform.draw(g);
         }
@@ -71,5 +71,9 @@ public class Rieka {
 
     public int getY() {
         return y;
+    }
+
+    public void setY(int y) {
+        this.y= y;
     }
 }

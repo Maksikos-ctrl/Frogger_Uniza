@@ -77,4 +77,14 @@ public class Zaba {
     public boolean intersects(Drevo obstacle) {
         return getBounds().intersects(obstacle.getBounds());
     }
+
+    public void getY() {
+        return this.y;
+
+    }
+
+    public void getI() {
+        return this.i;
+
+    }
 }
